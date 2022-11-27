@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Alfa+Slab+One&family=Montserrat:wght@600;700;800;900&family=Mouse+Memoirs&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Roboto+Slab:wght@100;300;500&family=Raleway+Dots&display=swap"
+            rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+        <script src="https://kit.fontawesome.com/3a881cfccc.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body onclick="counter1()">
+        <div class="nav">
+            <div class="name">
+                Math-e-connector
+            </div>
+            <div class="items">
+                <a href="#">
+                    <div class="nav-item">
+                        Play Again
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="nav-item">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="score">
+                <!-- <div class="heading">
+                    Score Board
+                </div> -->
+                <div class="subheading">
+                    Round
+                </div>
+                <div class="sBox">
+                    1
+                </div>
+                <div class="names">
+                    <div class="subheading">
+                        Player 1
+                        <div class="sBox">
+                            1
+                        </div>
+                    </div>
+                    <div class="subheading">
+                        Player 2
+                        <div class="sBox">
+                            1
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bigBox">
+                <div class="row bigRow">
+                    <div class="col-sm-4 bigDiv tl" onclick="win1()">
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv tl">
+                                <div class="overlay" onclick="circle1()">
+                                    <div id="circle1" class="circle"></div>
+                                    <div class="cross" id="cross1"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tm">
+                                <div class="overlay" onclick="circle2()">
+                                    <div id="circle2" class="circle"></div>
+                                    <div class="cross" id="cross2"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tr">
+                                <div class="overlay" onclick="circle3()">
+                                    <div id="circle3" class="circle"></div>
+                                    <div class="cross" id="cross3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv ml">
+                                <div class="overlay" onclick="circle4()">
+                                    <div id="circle4" class="circle"></div>
+                                    <div class="cross" id="cross4"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mm">
+                                <div class="overlay" onclick="circle5()">
+                                    <div id="circle5" class="circle"></div>
+                                    <div class="cross" id="cross5"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mr">
+                                <div class="overlay" onclick="circle6()">
+                                    <div id="circle6" class="circle"></div>
+                                    <div class="cross" id="cross6"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv bl">
+                                <div class="overlay" onclick="circle7()">
+                                    <div id="circle7" class="circle"></div>
+                                    <div class="cross" id="cross7"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv bm">
+                                <div class="overlay" onclick="circle8()">
+                                    <div id="circle8" class="circle"></div>
+                                    <div class="cross" id="cross8"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv br">
+                                <div class="overlay" onclick="circle9()">
+                                    <div id="circle9" class="circle"></div>
+                                    <div class="cross" id="cross9"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxOverlay" id="overlay1">
+                            <div class="circle" id="circleOverlay1"></div>
+                            <div class="cross" id="crossOverlay1"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 bigDiv tm" onclick="win2()">
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv tl">
+                                <div class="overlay" onclick="circle10()">
+                                    <div id="circle10" class="circle"></div>
+                                    <div class="cross" id="cross10"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tm">
+                                <div class="overlay" onclick="circle11()">
+                                    <div id="circle11" class="circle"></div>
+                                    <div class="cross" id="cross11"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tr">
+                                <div class="overlay" onclick="circle12()">
+                                    <div id="circle12" class="circle"></div>
+                                    <div class="cross" id="cross12"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv ml">
+                                <div class="overlay" onclick="circle13()">
+                                    <div id="circle13" class="circle"></div>
+                                    <div class="cross" id="cross13"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mm">
+                                <div class="overlay" onclick="circle14()">
+                                    <div id="circle14" class="circle"></div>
+                                    <div class="cross" id="cross14"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mr">
+                                <div class="overlay" onclick="circle15()">
+                                    <div id="circle15" class="circle"></div>
+                                    <div class="cross" id="cross15"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv bl">
+                                <div class="overlay" onclick="circle16()">
+                                    <div id="circle16" class="circle"></div>
+                                    <div class="cross" id="cross16"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv bm">
+                                <div class="overlay" onclick="circle17()">
+                                    <div id="circle17" class="circle"></div>
+                                    <div class="cross" id="cross17"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv br">
+                                <div class="overlay" onclick="circle18()">
+                                    <div id="circle18" class="circle"></div>
+                                    <div class="cross" id="cross18"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxOverlay" id="overlay2">
+                            <div class="circle" id="circleOverlay2"></div>
+                            <div class="cross" id="crossOverlay2"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 bigDiv tr" onclick="win3()">
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv tl">
+                                <div class="overlay" onclick="circle19()">
+                                    <div id="circle19" class="circle"></div>
+                                    <div class="cross" id="cross19"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tm">
+                                <div class="overlay" onclick="circle20()">
+                                    <div id="circle20" class="circle"></div>
+                                    <div class="cross" id="cross20"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tr">
+                                <div class="overlay" onclick="circle21()">
+                                    <div id="circle21" class="circle"></div>
+                                    <div class="cross" id="cross21"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv ml">
+                                <div class="overlay" onclick="circle22()">
+                                    <div id="circle22" class="circle"></div>
+                                    <div class="cross" id="cross22"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mm">
+                                <div class="overlay" onclick="circle23()">
+                                    <div id="circle23" class="circle"></div>
+                                    <div class="cross" id="cross23"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mr">
+                                <div class="overlay" onclick="circle24()">
+                                    <div id="circle24" class="circle"></div>
+                                    <div class="cross" id="cross24"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv bl">
+                                <div class="overlay" onclick="circle25()">
+                                    <div id="circle25" class="circle"></div>
+                                    <div class="cross" id="cross25"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv bm">
+                                <div class="overlay" onclick="circle26()">
+                                    <div id="circle26" class="circle"></div>
+                                    <div class="cross" id="cross26"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv br">
+                                <div class="overlay" onclick="circle27()">
+                                    <div id="circle27" class="circle"></div>
+                                    <div class="cross" id="cross27"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxOverlay" id="overlay3">
+                            <div class="circle" id="circleOverlay3"></div>
+                            <div class="cross" id="crossOverlay3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bigRow">
+                    <div class="col-sm-4 bigDiv ml" onclick="win4()">
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv tl">
+                                <div class="overlay" onclick="circle28()">
+                                    <div id="circle28" class="circle"></div>
+                                    <div class="cross" id="cross28"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tm">
+                                <div class="overlay" onclick="circle29()">
+                                    <div id="circle29" class="circle"></div>
+                                    <div class="cross" id="cross29"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tr">
+                                <div class="overlay" onclick="circle30()">
+                                    <div id="circle30" class="circle"></div>
+                                    <div class="cross" id="cross30"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv ml">
+                                <div class="overlay" onclick="circle31()">
+                                    <div id="circle31" class="circle"></div>
+                                    <div class="cross" id="cross31"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mm">
+                                <div class="overlay" onclick="circle32()">
+                                    <div id="circle32" class="circle"></div>
+                                    <div class="cross" id="cross32"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mr">
+                                <div class="overlay" onclick="circle33()">
+                                    <div id="circle33" class="circle"></div>
+                                    <div class="cross" id="cross33"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv bl">
+                                <div class="overlay" onclick="circle34()">
+                                    <div id="circle34" class="circle"></div>
+                                    <div class="cross" id="cross34"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv bm">
+                                <div class="overlay" onclick="circle35()">
+                                    <div id="circle35" class="circle"></div>
+                                    <div class="cross" id="cross35"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv br">
+                                <div class="overlay" onclick="circle36()">
+                                    <div id="circle36" class="circle"></div>
+                                    <div class="cross" id="cross36"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxOverlay" id="overlay4">
+                            <div class="circle" id="circleOverlay4"></div>
+                            <div class="cross" id="crossOverlay4"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 bigDiv mm" onclick="win5()">
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv tl">
+                                <div class="overlay" onclick="circle37()">
+                                    <div id="circle37" class="circle"></div>
+                                    <div class="cross" id="cross37"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tm">
+                                <div class="overlay" onclick="circle38()">
+                                    <div id="circle38" class="circle"></div>
+                                    <div class="cross" id="cross38"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tr">
+                                <div class="overlay" onclick="circle39()">
+                                    <div id="circle39" class="circle"></div>
+                                    <div class="cross" id="cross39"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv ml">
+                                <div class="overlay" onclick="circle40()">
+                                    <div id="circle40" class="circle"></div>
+                                    <div class="cross" id="cross40"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mm">
+                                <div class="overlay" onclick="circle41()">
+                                    <div id="circle41" class="circle"></div>
+                                    <div class="cross" id="cross41"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mr">
+                                <div class="overlay" onclick="circle42()">
+                                    <div id="circle42" class="circle"></div>
+                                    <div class="cross" id="cross42"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv bl">
+                                <div class="overlay" onclick="circle43()">
+                                    <div id="circle43" class="circle"></div>
+                                    <div class="cross" id="cross43"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv bm">
+                                <div class="overlay" onclick="circle44()">
+                                    <div id="circle44" class="circle"></div>
+                                    <div class="cross" id="cross44"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv br">
+                                <div class="overlay" onclick="circle45()">
+                                    <div id="circle45" class="circle"></div>
+                                    <div class="cross" id="cross45"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxOverlay" id="overlay5">
+                            <div class="circle" id="circleOverlay5"></div>
+                            <div class="cross" id="crossOverlay5"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 bigDiv mr" onclick="win6()">
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv tl">
+                                <div class="overlay" onclick="circle46()">
+                                    <div id="circle46" class="circle"></div>
+                                    <div class="cross" id="cross46"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tm">
+                                <div class="overlay" onclick="circle47()">
+                                    <div id="circle47" class="circle"></div>
+                                    <div class="cross" id="cross47"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tr">
+                                <div class="overlay" onclick="circle48()">
+                                    <div id="circle48" class="circle"></div>
+                                    <div class="cross" id="cross48"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv ml">
+                                <div class="overlay" onclick="circle49()">
+                                    <div id="circle49" class="circle"></div>
+                                    <div class="cross" id="cross49"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mm">
+                                <div class="overlay" onclick="circle50()">
+                                    <div id="circle50" class="circle"></div>
+                                    <div class="cross" id="cross50"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mr">
+                                <div class="overlay" onclick="circle51()">
+                                    <div id="circle51" class="circle"></div>
+                                    <div class="cross" id="cross51"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv bl">
+                                <div class="overlay" onclick="circle52()">
+                                    <div id="circle52" class="circle"></div>
+                                    <div class="cross" id="cross52"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv bm">
+                                <div class="overlay" onclick="circle53()">
+                                    <div id="circle53" class="circle"></div>
+                                    <div class="cross" id="cross53"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv br">
+                                <div class="overlay" onclick="circle54()">
+                                    <div id="circle54" class="circle"></div>
+                                    <div class="cross" id="cross54"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxOverlay" id="overlay6"></div>
+                    </div>
+                </div>
+                <div class="row bigRow">
+                    <div class="col-sm-4 bigDiv bl" onclick="win7()">
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv tl">
+                                <div class="overlay" onclick="circle55()">
+                                    <div id="circle55" class="circle"></div>
+                                    <div class="cross" id="cross55"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tm">
+                                <div class="overlay" onclick="circle56()">
+                                    <div id="circle56" class="circle"></div>
+                                    <div class="cross" id="cross56"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tr">
+                                <div class="overlay" onclick="circle57()">
+                                    <div id="circle57" class="circle"></div>
+                                    <div class="cross" id="cross57"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv ml">
+                                <div class="overlay" onclick="circle58()">
+                                    <div id="circle58" class="circle"></div>
+                                    <div class="cross" id="cross58"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mm">
+                                <div class="overlay" onclick="circle59()">
+                                    <div id="circle59" class="circle"></div>
+                                    <div class="cross" id="cross59"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mr">
+                                <div class="overlay" onclick="circle60()">
+                                    <div id="circle60" class="circle"></div>
+                                    <div class="cross" id="cross60"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv bl">
+                                <div class="overlay" onclick="circle61()">
+                                    <div id="circle61" class="circle"></div>
+                                    <div class="cross" id="cross61"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv bm">
+                                <div class="overlay" onclick="circle62()">
+                                    <div id="circle62" class="circle"></div>
+                                    <div class="cross" id="cross62"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv br">
+                                <div class="overlay" onclick="circle63()">
+                                    <div id="circle63" class="circle"></div>
+                                    <div class="cross" id="cross63"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxOverlay" id="overlay7"></div>
+                    </div>
+                    <div class="col-sm-4 bigDiv bm" onclick="win8()">
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv tl">
+                                <div class="overlay" onclick="circle64()">
+                                    <div id="circle64" class="circle"></div>
+                                    <div class="cross" id="cross64"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tm">
+                                <div class="overlay" onclick="circle65()">
+                                    <div id="circle65" class="circle"></div>
+                                    <div class="cross" id="cross65"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tr">
+                                <div class="overlay" onclick="circle66()">
+                                    <div id="circle66" class="circle"></div>
+                                    <div class="cross" id="cross66"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv ml">
+                                <div class="overlay" onclick="circle67()">
+                                    <div id="circle67" class="circle"></div>
+                                    <div class="cross" id="cross67"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mm">
+                                <div class="overlay" onclick="circle68()">
+                                    <div id="circle68" class="circle"></div>
+                                    <div class="cross" id="cross68"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mr">
+                                <div class="overlay" onclick="circle69()">
+                                    <div id="circle69" class="circle"></div>
+                                    <div class="cross" id="cross69"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv bl">
+                                <div class="overlay" onclick="circle70()">
+                                    <div id="circle70" class="circle"></div>
+                                    <div class="cross" id="cross70"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv bm">
+                                <div class="overlay" onclick="circle71()">
+                                    <div id="circle71" class="circle"></div>
+                                    <div class="cross" id="cross71"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv br">
+                                <div class="overlay" onclick="circle72()">
+                                    <div id="circle72" class="circle"></div>
+                                    <div class="cross" id="cross72"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxOverlay" id="overlay8"></div>
+                    </div>
+                    <div class="col-sm-4 bigDiv br" onclick="win9()">
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv tl">
+                                <div class="overlay" onclick="circle73()">
+                                    <div id="circle73" class="circle"></div>
+                                    <div class="cross" id="cross73"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tm">
+                                <div class="overlay" onclick="circle74()">
+                                    <div id="circle74" class="circle"></div>
+                                    <div class="cross" id="cross74"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv tr">
+                                <div class="overlay" onclick="circle75()">
+                                    <div id="circle75" class="circle"></div>
+                                    <div class="cross" id="cross75"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv ml">
+                                <div class="overlay" onclick="circle76()">
+                                    <div id="circle76" class="circle"></div>
+                                    <div class="cross" id="cross76"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mm">
+                                <div class="overlay" onclick="circle77()">
+                                    <div id="circle77" class="circle"></div>
+                                    <div class="cross" id="cross77"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv mr">
+                                <div class="overlay" onclick="circle78()">
+                                    <div id="circle78" class="circle"></div>
+                                    <div class="cross" id="cross78"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 smallDiv bl">
+                                <div class="overlay" onclick="circle79()">
+                                    <div id="circle79" class="circle"></div>
+                                    <div class="cross" id="cross79"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv bm">
+                                <div class="overlay" onclick="circle80()">
+                                    <div id="circle80" class="circle"></div>
+                                    <div class="cross" id="cross80"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 smallDiv br">
+                                <div class="overlay" onclick="circle81()">
+                                    <div id="circle81" class="circle"></div>
+                                    <div class="cross" id="cross81"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxOverlay" id="overlay9"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tictactoeOverlay">
+                BBBBBBBBIG overlay
+            </div>
+            <div class="chatBox">
+                <div class="chat" id="chat">
+                    <div class="header" id="header">
+                        Chat
+                        <i class="fa-solid fa-caret-down" onclick="hide()"></i>
+                    </div>
+                    <div class="cBox" id="cbox">
+                        <span class="msg">msg1</span>
+                        <span class="msg">msg2</span>
+                    </div>
+                    <div class="send" id="send">
+                        <input type="text" placeholder="Message…" class="textBox">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="bigOverlay" id="ansOverlay">
+            </div>
+        </div>
+    </body>
+    <script src="script.js" type="text/javascript"></script>
+</html>
